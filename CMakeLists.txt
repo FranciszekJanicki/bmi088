@@ -4,12 +4,8 @@ target_sources(bmi088 PRIVATE
     "bmi088.c"
 )
 
-target_include_directories(bmi088 PRIVATE 
-    ${CMAKE_DIR}/stm32cubemx
-)
-
-target_link_libraries(bmi088 PRIVATE
-    stm32cubemx
+target_include_directories(bmi088 PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(bmi088 PUBLIC
