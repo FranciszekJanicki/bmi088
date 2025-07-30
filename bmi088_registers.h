@@ -3,6 +3,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     uint8_t softreset : 8;
 } bmi088_acc_softreset_reg_t;
@@ -208,5 +212,9 @@ typedef struct {
 typedef struct {
     uint8_t gyro_chip_id : 8;
 } bmi088_gyro_chip_id_reg_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // BMI088_BMI088_REGISTERS_H

@@ -4,6 +4,10 @@
 #include "bmi088_config.h"
 #include "bmi088_registers.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     bmi088_config_t config;
     bmi088_interface_t interface;
@@ -220,5 +224,9 @@ bmi088_err_t bmi088_get_gyro_rate_reg(bmi088_t const* bmi088,
 
 bmi088_err_t bmi088_get_gyro_chip_id_reg(bmi088_t const* bmi088,
                                          bmi088_gyro_chip_id_reg_t* reg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // BMI088_BMI088_H

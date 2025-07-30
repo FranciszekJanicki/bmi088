@@ -4,6 +4,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define BMI088_TEMP_SCALE 0.125F
 #define BMI088_ACC_PERIOD_INC_US 39.0625F
 
@@ -141,5 +145,9 @@ typedef struct {
     bmi088_err_t (*gyro_bus_write_data)(void*, uint8_t, uint8_t const*, size_t);
     bmi088_err_t (*gyro_bus_read_data)(void*, uint8_t, uint8_t*, size_t);
 } bmi088_interface_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // BMI088_BMI088_CONFIG_H
